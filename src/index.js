@@ -31,7 +31,7 @@ app.get('/random',(req,res)=>{
 });
 
 //connecting to mongodb
-mongoose.connect("mongodb+srv://admin:admin123@cluster0.mpbwrck.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb://localhost:27017/expressdb")
 .then(()=>{
     console.log("Connected to database");
     app.listen(8000,()=>{
