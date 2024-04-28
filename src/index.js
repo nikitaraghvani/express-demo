@@ -2,6 +2,7 @@
 const express=require("express");
 const quotes=require("./quotes.json");
 const userRouter = require("./routes/userRoutes");
+const noteRouter=require("./routes/noteRoutes");
 const app=express();
 
 //converting request body in json format
@@ -11,6 +12,7 @@ app.use(express.json());
 const mongoose=require("mongoose");
 
 app.use("/users",userRouter);
+app.use("/notes",noteRouter);
 
 app.get('/',(req,res)=>{
     res.send("Hello from Express")
